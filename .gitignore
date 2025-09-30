@@ -1,0 +1,6 @@
+node_modules
+# Local-only env file
+.env
+# Expo app.json may contain secrets
+app.json
+.env
