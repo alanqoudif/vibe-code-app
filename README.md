@@ -1,206 +1,156 @@
-# Smart Calendar - Student Smart Calendar App
+# learnz | ليرنز - تطبيق الدراسة الذكي
 
-A creative, Notion-like student smart calendar built with Expo 54 that helps students manage their academic life with AI-powered features and modern UI.
+تطبيق React Native متكامل للدراسة والتعلم مع مساعد ذكي مدعوم بـ AI.
 
-## Features
+## 🚀 الميزات الرئيسية
 
-### 📅 Smart Calendar
-- **Multiple Views**: Day, week, and month calendar views
-- **Automatic Scheduling**: Upload your timetable and let AI populate your calendar
-- **Smart Reminders**: Get notified before classes and deadlines
-- **Quick Actions**: Join classes, view homework, mark attendance with one tap
+- **مساعد ذكي للدراسة** - مدعوم بـ OpenAI GPT
+- **تقويم ذكي** - إدارة الحصص والأحداث
+- **مزامنة فورية** - مع قاعدة بيانات Supabase
+- **إشعارات ذكية** - تذكيرات للحصص والواجبات
+- **واجهة عربية** - مصممة للطلاب العرب
 
-### 📝 Task Management
-- **Smart Task Creation**: AI generates tasks based on your classes
-- **Priority System**: High, medium, and low priority tasks
-- **Progress Tracking**: Visual progress indicators and completion stats
-- **Deadline Alerts**: Never miss an assignment again
+## 📱 التقنيات المستخدمة
 
-### 🤖 AI Study Bot
-- **Personalized Tips**: Get study tips tailored to your schedule
-- **Interactive Chat**: Ask questions about study strategies
-- **Motivation**: Daily encouragement and study suggestions
-- **Smart Insights**: AI analyzes your patterns and suggests improvements
+- **React Native** مع Expo
+- **TypeScript** للبرمجة الآمنة
+- **Supabase** لقاعدة البيانات والمصادقة
+- **OpenAI API** للمساعد الذكي
+- **Expo Notifications** للإشعارات
 
-### 📸 Timetable Upload
-- **Photo Capture**: Snap a photo of your timetable
-- **Gallery Import**: Select from your photo library
-- **Manual Entry**: Type your schedule in natural language
-- **AI Processing**: Automatically extracts class information
+## 🛠️ الإعداد والتشغيل
 
-### 🎨 Modern UI/UX
-- **Dark Mode**: Beautiful dark and light themes
-- **Smooth Animations**: Polished interactions and transitions
-- **Notion-like Design**: Clean, modern interface with soft rounded corners
-- **Responsive**: Optimized for all screen sizes
+### المتطلبات
+- Node.js 18+
+- Expo CLI
+- حساب OpenAI (للمساعد الذكي)
+- حساب Supabase (للقاعدة البيانات)
 
-### 🔔 Smart Notifications
-- **Class Reminders**: 15 minutes before each class
-- **Deadline Alerts**: 1 day before task due dates
-- **Study Tips**: Daily motivational messages
-- **Quick Actions**: Smart suggestions throughout the day
+### 1. استنساخ المشروع
+```bash
+git clone https://github.com/alanqoudif/vibe-code-app.git
+cd vibe-code-app
+```
 
-## Tech Stack
+### 2. تثبيت التبعيات
+```bash
+npm install
+```
 
-- **Framework**: Expo 54 with React Native
-- **Language**: TypeScript
-- **Navigation**: React Navigation 6
-- **State Management**: React Context API
-- **Storage**: AsyncStorage for local data persistence
-- **Notifications**: Expo Notifications
-- **Camera**: Expo Camera and Image Picker
-- **Calendar**: React Native Calendars
-- **UI Components**: Custom components with modern design
+### 3. إعداد متغيرات البيئة
+```bash
+# انسخ ملف المثال
+cp env.example .env
 
-## Installation
+# عدّل ملف .env وأضف API keys الخاصة بك
+EXPO_PUBLIC_OPENAI_API_KEY=your_openai_api_key_here
+```
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd SmartCalendar
-   ```
+### 4. تشغيل التطبيق
+```bash
+# للتطوير
+npm start
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+# لـ Android
+npm run android
 
-3. **Start the development server**
-   ```bash
-   npm start
-   ```
+# لـ iOS
+npm run ios
+```
 
-4. **Run on device/simulator**
-   ```bash
-   # iOS
-   npm run ios
-   
-   # Android
-   npm run android
-   
-   # Web
-   npm run web
-   ```
+## 🔑 إعداد API Keys
 
-## Project Structure
+### OpenAI API Key
+1. اذهب إلى [OpenAI Platform](https://platform.openai.com/)
+2. أنشئ API key جديد
+3. أضفه في ملف `.env`
+
+### Supabase (مُعد مسبقاً)
+- قاعدة البيانات مُعدة ومُهيأة
+- لا حاجة لإعداد إضافي
+
+## 📚 دليل الاستخدام
+
+### إضافة حصة جديدة
+1. اذهب إلى شاشة التقويم
+2. اضغط "إضافة حصة"
+3. أدخل تفاصيل الحصة
+4. احفظ
+
+### استخدام المساعد الذكي
+1. اذهب إلى شاشة "المساعد"
+2. اكتب سؤالك
+3. احصل على إجابة ذكية
+
+### المزامنة
+- المزامنة تلقائية مع قاعدة البيانات
+- يمكن استخدام السحب للتحديث اليدوي
+
+## 🔧 استكشاف الأخطاء
+
+### مشاكل شائعة وحلولها
+
+#### المساعد الذكي لا يعمل
+- تحقق من صحة OpenAI API key
+- تأكد من وجود ملف `.env`
+- تحقق من اتصال الإنترنت
+
+#### المزامنة لا تعمل
+- اسحب الشاشة لأسفل للتحديث
+- تحقق من تسجيل الدخول
+- أعد تشغيل التطبيق
+
+#### لا تظهر الحصص
+- تحقق من إضافة الحصة بنجاح
+- جرب المزامنة اليدوية
+- تحقق من Console للأخطاء
+
+## 📁 هيكل المشروع
 
 ```
 src/
-├── components/          # Reusable UI components
-│   ├── Button.tsx
-│   ├── Card.tsx
-│   ├── Input.tsx
-│   └── AnimatedCard.tsx
-├── contexts/           # React Context providers
-│   └── ThemeContext.tsx
-├── navigation/         # Navigation configuration
-│   └── AppNavigator.tsx
-├── screens/           # Main app screens
-│   ├── CalendarScreen.tsx
-│   ├── TasksScreen.tsx
-│   ├── StudyBotScreen.tsx
-│   ├── SettingsScreen.tsx
-│   └── TimetableUploadScreen.tsx
-├── services/          # Business logic and API calls
-│   ├── StorageService.ts
-│   ├── NotificationService.ts
-│   └── SmartSchedulingService.ts
-├── types/             # TypeScript type definitions
-│   └── index.ts
-└── utils/             # Helper functions
-    └── helpers.ts
+├── components/          # مكونات قابلة لإعادة الاستخدام
+├── contexts/           # إدارة الحالة العامة
+├── lib/               # إعدادات المكتبات الخارجية
+├── navigation/        # تنقل التطبيق
+├── screens/          # شاشات التطبيق
+├── services/         # خدمات API وقاعدة البيانات
+├── types/           # تعريفات TypeScript
+└── utils/           # أدوات مساعدة
 ```
 
-## Key Features Implementation
+## 🛡️ الأمان
 
-### Smart Scheduling
-The app uses AI to parse timetable text and automatically create classes and tasks:
+- **لا تشارك API keys أبداً**
+- **استخدم متغيرات البيئة فقط**
+- **أضف `.env` إلى `.gitignore`**
+- **راجع ملف `API_KEYS_SETUP.md` للتفاصيل**
 
-```typescript
-// Parse natural language timetable
-const classes = SmartSchedulingService.parseTimetableText(`
-  Monday: 9:00 AM - Math, 11:00 AM - Science
-  Tuesday: 10:00 AM - English, 2:00 PM - History
-`);
+## 📖 التوثيق
 
-// Generate smart tasks
-const tasks = SmartSchedulingService.generateSmartTasks(classes);
-```
+- `API_KEYS_SETUP.md` - إعداد API keys
+- `QUICK_TEST_GUIDE.md` - دليل الاختبار السريع
+- `COMPREHENSIVE_FIX_SUMMARY.md` - ملخص الإصلاحات
 
-### Theme System
-Complete dark/light mode support with consistent theming:
+## 🤝 المساهمة
 
-```typescript
-const { theme, isDark, toggleTheme } = useTheme();
+1. Fork المشروع
+2. أنشئ فرع للميزة الجديدة
+3. Commit التغييرات
+4. Push للفرع
+5. أنشئ Pull Request
 
-// Use theme colors
-<View style={{ backgroundColor: theme.colors.background }}>
-  <Text style={{ color: theme.colors.text }}>Hello World</Text>
-</View>
-```
+## 📄 الترخيص
 
-### Data Persistence
-All data is stored locally using AsyncStorage:
+هذا المشروع مرخص تحت رخصة MIT.
 
-```typescript
-// Save classes
-await StorageService.saveClasses(classes);
+## 📞 الدعم
 
-// Get tasks
-const tasks = await StorageService.getTasks();
-
-// Export data
-const exportData = await StorageService.exportData();
-```
-
-### Notifications
-Smart notification system with different types:
-
-```typescript
-// Schedule class reminder
-await NotificationService.scheduleClassReminder(classData);
-
-// Schedule task deadline
-await NotificationService.scheduleTaskDeadlineReminder(task);
-```
-
-## Customization
-
-### Adding New Task Types
-1. Update the `Task` type in `src/types/index.ts`
-2. Add the new type to the `getTaskTypeIcon` function in `src/utils/helpers.ts`
-3. Update the task creation UI in `TasksScreen.tsx`
-
-### Adding New Quick Actions
-1. Update the `QuickAction` type in `src/types/index.ts`
-2. Add new actions to the quick actions grid in `CalendarScreen.tsx`
-3. Implement the action logic in the respective service
-
-### Customizing Themes
-1. Modify the theme objects in `src/contexts/ThemeContext.tsx`
-2. Add new color properties as needed
-3. Update components to use new theme properties
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Expo team for the amazing development platform
-- React Navigation for smooth navigation
-- React Native Calendars for the calendar component
-- All the open-source contributors who made this possible
+إذا واجهت أي مشاكل:
+1. راجع ملفات التوثيق
+2. تحقق من Console للأخطاء
+3. أنشئ Issue في GitHub
 
 ---
 
-Made with ❤️ for students everywhere. Study smart, not hard!
-# vibe-code-app
+**تم تطويره بـ ❤️ للطلاب العرب**
